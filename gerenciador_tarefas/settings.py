@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'gerenciador_tarefas.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
+        'NAME': 'gerenciador_tarefas',
+        'USER': 'root',
+        'PASSWORD': 'D@nielcunha23',
         'HOST': 'localhost',
         'PORT': '3306'
     }

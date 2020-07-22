@@ -15,18 +15,20 @@
       <a class="navbar-brand">Gerenciador de Tarefas - TreinaWeb</a>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
+        {% if user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'listar_tarefas' %}"
               >Listar Tarefas
             </a>
           </li>
-          <li class="nav-item">
+          {% endif %}
           {% if user.is_authenticated %}
+          <li class="nav-item">
             <a id="log_button" class="nav-link" href="{% url 'deslogar_usuario' %}"
               >Logout
             </a>
-          {% endif %}
           </li>
+          {% endif %}
           <li class="nav-item">
             <a class="nav-link"
               >{{request.user.username}}
